@@ -18,7 +18,7 @@
             ⇒各プロパティは、フィールドタイプごとに異なる
           },
           type: @type {string} フィールドタイプ  
-          spaceId:　@type {string}  config.htmlの追加したいdivのid,
+          divId:　@type {string}  config.htmlの追加したいdivのid,
           category: @type {string} カテゴリ
           validation: @type {object} 入力制御対象項目
           appField: @type {object} 選択のみ
@@ -94,7 +94,7 @@
               "button"
               "table",
               "attachment" 未完成
-            spaceId: config.htmlの追加したいdivのid,
+            divId: config.htmlの追加したいdivのid,
             category: いずれかのカテゴリ 
                   "common" テーブル、選択項目以外
                   "select"  選択項目
@@ -169,7 +169,7 @@
           disabled: false,
         },
         type: "text",
-        spaceId: "text",
+        divId: "text",
         category: "common",
       },
       textarea: {
@@ -185,7 +185,7 @@
           disabled: false,
         },
         type: "textarea",
-        spaceId: "textarea",
+        divId: "textarea",
         category: "common",
       },
       timePicker: {
@@ -205,7 +205,7 @@
           min: "00:00",
         },
         type: "timePicker",
-        spaceId: "timePicker",
+        divId: "timePicker",
         category: "common",
       },
       dateTimePicker: {
@@ -225,7 +225,7 @@
           min: "00:00",
         },
         type: "dateTimePicker",
-        spaceId: "dateTimePicker",
+        divId: "dateTimePicker",
         category: "common",
       },
       datePicker: {
@@ -241,7 +241,7 @@
           disabled: false,
         },
         type: "datePicker",
-        spaceId: "datePicker",
+        divId: "datePicker",
         category: "common",
       },
       checkbox: {
@@ -264,7 +264,7 @@
           filter: "grouped",
           type: ["SUBTABLE"],
         },
-        spaceId: "checkbox",
+        divId: "checkbox",
         category: "select",
       },
       combobox: {
@@ -284,7 +284,7 @@
           filter: "grouped",
           type: ["SINGLE_LINE_TEXT"],
         },
-        spaceId: "combobox",
+        divId: "combobox",
         category: "select",
       },
       radioButton: {
@@ -318,7 +318,7 @@
         },
         type: "radioButton",
         appField: false,
-        spaceId: "radioButton",
+        divId: "radioButton",
         category: "select",
       },
       multiChoice: {
@@ -350,7 +350,7 @@
         },
         type: "multiChoice",
         appField: false,
-        spaceId: "multiChoice",
+        divId: "multiChoice",
         category: "select",
       },
       dropdown: {
@@ -381,7 +381,7 @@
           disabled: false,
         },
         type: "dropdown",
-        spaceId: "dropdown",
+        divId: "dropdown",
         category: "select",
       },
       submit: {
@@ -396,7 +396,7 @@
         },
         type: "button",
         appField: false,
-        spaceId: "submit-button",
+        divId: "submit-button",
         category: "button",
         role: "submit",
       },
@@ -412,7 +412,7 @@
         },
         type: "button",
         appField: false,
-        spaceId: "cancel-button",
+        divId: "cancel-button",
         category: "button",
         role: "cancel",
       },
@@ -450,7 +450,7 @@
           },
         },
         type: "table",
-        spaceId: "table_sp",
+        divId: "table_sp",
         category: "table",
         tableId: "table-id",
         appField: {
