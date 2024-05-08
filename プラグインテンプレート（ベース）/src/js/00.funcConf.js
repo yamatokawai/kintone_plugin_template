@@ -219,7 +219,7 @@
       let setValArr = [];
       const createFields = (fieldProp) => {
         setValArr.push(fieldProp); //config.set用配列
-        const sp = document.getElementById(fieldProp.spaceId); // config.htmlに設定したidをget（追加したい位置）
+        const sp = document.getElementById(fieldProp.divId); // config.htmlに設定したidをget（追加したい位置）
         switch (fieldProp.type) {
           case "text":
             const text = new Kuc.Text(fieldProp.settings);

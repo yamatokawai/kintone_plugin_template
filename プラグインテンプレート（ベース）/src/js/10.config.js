@@ -2,7 +2,7 @@
   /*
    * 編集不可 window.SRから値取得
    */
-  const FIELD_CONF = window.SR.Conf.field;
+  const FIELDS_CONF = window.SR.Conf.FIELDS_CONFIG;
   const FUNC_CONF = window.SR.funcConf;
 
   /* サブテーブルのみ直接記載 */
@@ -14,7 +14,7 @@
   // 15行目、16行目のitems部分と条件分岐は、フィールド情報を使用したい場合の記載
   const items = await FUNC_CONF.createInitialFields();
   if (items.length) {
-    const space = document.getElementById(FIELD_CONF.table.spaceId);
+    const space = document.getElementById(FIELDS_CONF.table.divId);
     const renderFN = (dataCell) => {
       const dropdown = new Kuc.Dropdown({
         items: items,
@@ -25,7 +25,7 @@
     };
 
     const renderPT = (dataCell) => {
-      const text = new Kuc.Text(FIELD_CONF.table.childElem.text);
+      const text = new Kuc.Text(FIELDS_CONF.table.childElem.text);
       text.value = dataCell;
       return text;
     };
@@ -81,7 +81,7 @@
 
       （例）
       const renderAge = (dataCell) => {
-        const text = new Kuc.Text(FIELD_CONF.table.childElem.text);
+        const text = new Kuc.Text(FIELDS_CONF.table.childElem.text);
         text.value = dataCell; 
         text.addEventListener("change", (event) => {
           text.error = event.detail.value ? "" : "必須です";
@@ -90,9 +90,9 @@
       };
 */
 
-// const space = document.getElementById(FIELD_CONF.table.spaceId);
+// const space = document.getElementById(FIELDS_CONF.table.divId);
 // const renderAge = (dataCell) => {
-//   const text = new Kuc.Text(FIELD_CONF.table.childElem.text);
+//   const text = new Kuc.Text(FIELDS_CONF.table.childElem.text);
 //   text.value = dataCell;
 //   text.addEventListener("change", (event) => {
 //     text.error = event.detail.value ? "" : "必須です";

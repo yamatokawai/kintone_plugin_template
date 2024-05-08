@@ -11,7 +11,7 @@
      */
 
     /** 大枠イメージ 
-     * field:{
+     * FIELD＿CONFIG:{
         "フィールドコード":{ 一意の名称
           settings:{ @type {object}
             項目設定（参照：https://ui-component.kintone.dev/ja/docs/components/desktop/attachment/）
@@ -75,7 +75,7 @@
       },
      */
 
-    /** field:{
+    /** FIELD_CONFIG:{
         "フィールドコード":{ 一意の名称
           settings:{ 
             項目設定（参照：https://ui-component.kintone.dev/ja/docs/components/desktop/attachment/）
@@ -152,7 +152,7 @@
      *    ２．テーブル
      */
 
-    field: {
+    FIELDS_CONFIG: {
       text: {
         settings: {
           label: "",
