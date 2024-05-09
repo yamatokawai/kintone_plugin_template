@@ -5,7 +5,7 @@
 (() => {
   window.SR = window.SR || {};
   window.SR.funcConf = window.SR.funcConf || {};
-  window.SR.Conf = window.SR.Conf || {};
+  window.SR.fieldConf = window.SR.fieldConf || {};
   const Kuc = Kucs[Object.keys(Kucs).join("")];
 
   window.SR.funcConf = {
@@ -15,7 +15,7 @@
      * @return {Array} エラー配列
      */
     validateInputVal: (fieldsArr) => {
-      const VALIDATION = window.SR.Conf.validation;
+      const VALIDATION = window.SR.fieldConf.VALIDATION;
 
       const validateInputWithRegex = (el, validation) => {
         const regex = validation.regex;
@@ -152,9 +152,9 @@
       const property = resp.property;
       let uniqueNumSp = 0;
       let uniqueNumLb = 0;
+      let FLabel;
+      let FCode;
       const pushFieldArr = (elem) => {
-        let FLabel;
-        let FCode;
         switch (elem.type) {
           case "SPACER":
             uniqueNumSp++;
@@ -173,7 +173,6 @@
             FCode = elem.code;
             break;
         }
-        if (!elem.code) return;
         fieldArr.push({
           label: `${FLabel}（${FCode}）`,
           value: FCode,
@@ -221,7 +220,7 @@
      */
     createInitialFields: async () => {
       const FUNC_CONF = window.SR.funcConf;
-      const FIELD_CONF = window.SR.Conf.field;
+      const FIELDS_CONF = window.SR.fieldConf.FIELDS_CONFIG;
       let fieldsItems;
 
       let resp = {};
@@ -233,10 +232,10 @@
       });
       resp["layout"] = respLayout.layout;
       resp["property"] = respFields.properties;
-      Object.keys(FIELD_CONF).forEach((el) => {
-        if (!FIELD_CONF[el].appField) return;
-        fieldsItems = FUNC_CONF.sortFieldElement(resp, FIELD_CONF[el]);
-        if (FIELD_CONF[el].settings) FIELD_CONF[el].settings.items = fieldsItems;
+      Object.keys(FIELDS_CONF).forEach((el) => {
+        if (!FIELDS_CONF[el].appField) return;
+        fieldsItems = FUNC_CONF.sortFieldElement(resp, FIELDS_CONF[el]);
+        if (FIELDS_CONF[el].settings) FIELDS_CONF[el].settings.items = fieldsItems;
       });
       let setValArr = [];
       const createFields = (fieldProp) => {
@@ -321,8 +320,8 @@
             break;
         }
       };
-      Object.keys(FIELD_CONF).forEach((field) => {
-        createFields(FIELD_CONF[field]);
+      Object.keys(FIELDS_CONF).forEach((field) => {
+        createFields(FIELDS_CONF[field]);
       });
       if (fieldsItems.length) fieldsItems.unshift({ label: "-----", value: "default" });
       return fieldsItems;

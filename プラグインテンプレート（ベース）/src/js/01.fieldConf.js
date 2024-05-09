@@ -3,21 +3,21 @@
  */
 
 (() => {
-  window.SR.Conf = window.SR.Conf || {};
+  window.SR.fieldConf = window.SR.fieldConf || {};
 
-  window.SR.Conf = {
+  window.SR.fieldConf = {
     /*
      *　１．配置したい項目を設定（コメント要追記）
      */
 
-    /** 大枠イメージ 
+    /** 大枠イメージ
      * FIELD＿CONFIG:{
         "フィールドコード":{ 一意の名称
           settings:{ @type {object}
             項目設定（参照：https://ui-component.kintone.dev/ja/docs/components/desktop/attachment/）
             ⇒各プロパティは、フィールドタイプごとに異なる
           },
-          type: @type {string} フィールドタイプ  
+          type: @type {string} フィールドタイプ
           divId:　@type {string}  config.htmlの追加したいdivのid,
           category: @type {string} カテゴリ
           validation: @type {object} 入力制御対象項目
@@ -77,11 +77,11 @@
 
     /** FIELD_CONFIG:{
         "フィールドコード":{ 一意の名称
-          settings:{ 
+          settings:{
             項目設定（参照：https://ui-component.kintone.dev/ja/docs/components/desktop/attachment/）
             ⇒各プロパティは、フィールドタイプごとに異なる
           },
-          type:  以下のいずれかのフィールドタイプ  
+          type:  以下のいずれかのフィールドタイプ
               "text"
               "textarea"
               "timePicker"
@@ -95,7 +95,7 @@
               "table",
               "attachment" 未完成
             divId: config.htmlの追加したいdivのid,
-            category: いずれかのカテゴリ 
+            category: いずれかのカテゴリ
                   "common" テーブル、選択項目以外
                   "select"  選択項目
                   "table",  テーブル
@@ -139,7 +139,7 @@
           },
           role: "submit"/"cancel"/"other" 保存ボタンかキャンセルボタンか他か（ボタンのみ）
           toggle: [ 表示切替（ボタンのみ）
-            表示切替をしたいフィールドのid 
+            表示切替をしたいフィールドのid
           ]
           tableId: "テーブルフィールドのid"（テーブルのみ）
         }
@@ -463,7 +463,7 @@
     /*
      * 入力制御用メッセージ：メッセージのみ編集可能
      */
-    validation: {
+    VALIDATION: {
       alpha_sign: {
         message: "半角英数字か @ . - _ で入力してください",
         regex: /^[a-zA-Z0-9_]+$/,

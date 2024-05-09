@@ -2,7 +2,7 @@
   /*
    * 編集不可 window.SRから値取得
    */
-  const FIELDS_CONF = window.SR.Conf.FIELDS_CONFIG;
+  const FIELDS_CONF = window.SR.fieldConf.FIELDS_CONFIG;
   const FUNC_CONF = window.SR.funcConf;
 
   /* サブテーブルのみ直接記載 */
@@ -71,7 +71,7 @@
 })(kintone.$PLUGIN_ID);
 
 /*
-*   ★サブテーブル 
+*   ★サブテーブル
     公式URL：https://ui-component.kintone.dev/ja/docs/components/desktop/table
   　●render方法
       const render~~ = (arg) =>{
@@ -82,7 +82,7 @@
       （例）
       const renderAge = (dataCell) => {
         const text = new Kuc.Text(FIELDS_CONF.table.childElem.text);
-        text.value = dataCell; 
+        text.value = dataCell;
         text.addEventListener("change", (event) => {
           text.error = event.detail.value ? "" : "必須です";
         });
