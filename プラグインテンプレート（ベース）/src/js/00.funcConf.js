@@ -150,11 +150,33 @@
     sortFieldElement: (resp, FIELD) => {
       const layouts = resp.layout;
       const property = resp.property;
+      let uniqueNumSp = 0;
+      let uniqueNumLb = 0;
       const pushFieldArr = (elem) => {
-        if (elem.type === "SPACER") return;
+        let FLabel;
+        let FCode;
+        switch (elem.type) {
+          case "SPACER":
+            uniqueNumSp++;
+            FLabel = elem.elementId ? elem.elementId : `""`;
+            FCode = `スペースフィールド${uniqueNumSp}`;
+            break;
+          case "LABEL":
+            uniqueNumLb++;
+            FLabel = elem.label ? elem.label : `""`;
+            FCode = `ラベルフィールド${uniqueNumLb}`;
+            break;
+          case "HR":
+            break;
+          default:
+            FLabel = property[elem.code].label;
+            FCode = elem.code;
+            break;
+        }
+        if (!elem.code) return;
         fieldArr.push({
-          label: `${property[elem.code].label}（${elem.code}）`,
-          value: elem.code,
+          label: `${FLabel}（${FCode}）`,
+          value: FCode,
         });
       };
       let fieldArr = [];
