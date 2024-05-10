@@ -214,7 +214,7 @@
           requiredIcon: false,
           language: "auto",
           hour12: false,
-          value: "2021-11-11T11:30:00",
+          value: "",
           error: "",
           className: "options-class",
           id: "dateTimePicker-id",
