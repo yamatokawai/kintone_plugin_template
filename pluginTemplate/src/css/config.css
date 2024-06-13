@@ -1,0 +1,27 @@
+.submit-button-container {
+  margin: 50px 0 0 20px;
+}
+
+/* 横並びにしたい場合、horizontal-containerをあてる */
+.row-container > .horizontal-container {
+  margin: 0 0 12px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 縦並びにしたい場合、field-containerをあてる */
+.row-container > .field-container {
+  margin: 0 0 12px 10px;
+}
+
+/* もしくは以下形式も可能 
+.row-container > div {
+  margin: 0 0 12px 10px;
+}
+*/
+
+.field-container > div,
+.horizontal-container > div {
+  padding: 0 8px;
+  margin: 0 0 12px 10px;
+}
