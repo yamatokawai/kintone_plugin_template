@@ -46,7 +46,7 @@
 ```
 　②以下部分を修正<br>
  　・row-containerクラス名を保持するdiv内に、追加したいフィールド数分divを追加。<br>
-   ・追加したdivに任意のidを付与。<br>
+ 　・追加したdivに任意のidを付与。<br>
 ```markdown
 <!-- 以下div内に追加 -->
 <div class="row-container">
