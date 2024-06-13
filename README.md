@@ -16,9 +16,9 @@
 　②ディレクトリ名「プラグインテンプレート（ベース）」をコピーして、ローカル環境に貼り付ける。<br>
 　③vscodeを開き、コピーした上記ディレクトリを開く。<br>
 2. ファイル修正<br>
-　●config.html
-　　①以下動画による手順に沿って、修正
-```
+　●config.html：以下手順に沿って、修正<br>
+ ①初期html
+```markdown
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -44,4 +44,18 @@
         <script src="../js/10.config.js"></script>
     </body>
 </html>
+```
+　②以下部分を修正
+ 　・row-containerクラス名を保持するdiv内に、追加したいフィールド数分divを追加。
+   ・追加したdivに任意のidを付与。
+```markdown
+<!-- 以下div内に追加 -->
+<div class="row-container">
+  <!-- フィールド数分divを追加 -->
+  <div id="text"></div> 
+  <div id="dateTimePicker"></div> 
+  <div id="dropdown"></div> 
+  <div id="checkbox"></div> 
+  <div id="radioButton"></div> 
+</div>
 ```
