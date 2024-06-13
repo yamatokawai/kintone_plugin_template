@@ -15,8 +15,7 @@
 　①右記ディレクトリへアクセス"T:\02.ソリューション事業部\92.技術資料\07.kintone\自社開発プラグイン\プラグインテンプレート"<br>
 　②ディレクトリ名「プラグインテンプレート（ベース）」をコピーして、ローカル環境に貼り付ける。<br>
 　③vscodeを開き、コピーした上記ディレクトリを開く。<br>
-2. ファイル修正<br>
-　●config.html：以下手順に沿って、修正<br>
+2. config.htmlファイル修正<br>
  ①初期html
 ```markdown
 <!DOCTYPE html>
@@ -59,3 +58,44 @@
   <div id="radioButton"></div> 
 </div>
 ```
+③完成形<br>
+・本サンプルでは、以下フィールドを作成
+　- 文字列（一行）
+  - 日時
+  - ドロップダウン
+  - チェックボックス
+  - ラジオボタン 
+```markdown
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <!-- フィールド配置先はdivで作成。idは必ず付与。 -->
+    <body>
+        <div>
+            <!-- 以下div内に追加 -->
+            <div class="row-container">
+                <div id="text"></div>
+                <div id="dateTimePicker"></div>
+                <div id="dropdown"></div>
+                <div id="checkbox"></div>
+                <div id="radioButton"></div>
+            </div>
+            <!-- 以下編集不可 -->
+            <div style="display: flex;">
+                <div id="submit-button" class="submit-button-container"></div>
+                <div id="cancel-button" class="submit-button-container"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/kintone-ui-component/umd/kuc.min.js"></script>
+        <script src="../js/00.funcConf.js"></script>
+        <script src="../js/01.fieldConf.js"></script>
+        <script src="../js/10.config.js"></script>
+    </body>
+</html>
+```
+⇒config.html修正完了
