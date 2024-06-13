@@ -11,12 +11,15 @@
 　- manifest.json<br>
  
 # マニュアル
+0. サンプル完成形
+<img width="539" alt="スクリーンショット 2024-06-13 173107" src="https://github.com/yamatokawai/kintone_plugin_template/assets/131321611/98580936-a865-4628-b2d9-062f91059fff">
+
 1. プラグインテンプレート利用方法<br>
 　①右記ディレクトリへアクセス"T:\02.ソリューション事業部\92.技術資料\07.kintone\自社開発プラグイン\プラグインテンプレート"<br>
 　②ディレクトリ名「プラグインテンプレート（ベース）」をコピーして、ローカル環境に貼り付ける。<br>
 　③vscodeを開き、コピーした上記ディレクトリを開く。<br>
 2. config.htmlファイル修正<br>
- ①初期html
+　①初期html
 ```markdown
 <!DOCTYPE html>
 <html lang="ja">
@@ -58,13 +61,13 @@
   <div id="radioButton"></div> 
 </div>
 ```
-③完成形<br>
-・本サンプルでは、以下フィールドを作成
-  - 文字列（一行）
-  - 日時
-  - ドロップダウン
-  - チェックボックス
-  - ラジオボタン 
+　③完成形<br>
+　・本サンプルでは、以下フィールドを作成<br>
+   - 文字列（一行）
+   - 日時
+   - ドロップダウン
+   - チェックボックス
+   - ラジオボタン
 ```markdown
 <!DOCTYPE html>
 <html lang="ja">
