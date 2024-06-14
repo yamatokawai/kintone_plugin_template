@@ -19,7 +19,7 @@
 　②ディレクトリ名「プラグインテンプレート（ベース）」をコピーして、ローカル環境に貼り付ける。<br>
 　③vscodeを開き、コピーした上記ディレクトリを開く。<br>
 2. config.htmlファイル修正<br>
-　①初期html
+①初期内容
 ```markdown
 <!DOCTYPE html>
 <html lang="ja">
@@ -48,7 +48,8 @@
     </body>
 </html>
 ```
-　②以下部分を修正<br>
+
+②以下部分を修正<br>
  　・row-containerクラス名を保持するdiv内に、追加したいフィールド数分divを追加。<br>
  　・追加したdivに任意のidを付与。<br>
 　 ・本サンプルでは、以下フィールドを作成<br>
@@ -68,7 +69,8 @@
   <div id="radioButton"></div> 
 </div>
 ```
-　③完成形<br>
+
+③完成形
 ```markdown
 <!DOCTYPE html>
 <html lang="ja">
@@ -103,3 +105,64 @@
 </html>
 ```
 ⇒config.html修正完了
+
+3.o1.fieldConf.jsファイル修正<br>
+①初期内容
+```
+/*
+ *　01.fieldConf.js：項目・値設定用
+ */
+
+(() => {
+  window.SR.fieldConf = window.SR.fieldConf || {};
+
+  window.SR.fieldConf = {
+    FIELDS_CONFIG: {
+    /** ここに追加 */
+
+    // submit変更不可
+      submit: {
+        settings: {
+          text: "保存",
+          type: "submit",
+          content: "保存",
+          className: "options-class",
+          id: "button-id",
+          visible: true,
+          disabled: false,
+        },
+        type: "button",
+        appField: false,
+        divId: "submit-button",
+        category: "button",
+        role: "submit",
+      },
+      // cancel変更不可
+      cancel: {
+        settings: {
+          text: "キャンセル",
+          type: "normal",
+          content: "キャンセル",
+          className: "options-class",
+          id: "button-id",
+          visible: true,
+          disabled: false,
+        },
+        type: "button",
+        appField: false,
+        divId: "cancel-button",
+        category: "button",
+        role: "cancel",
+      },
+    },
+
+    /*
+     * 入力制御用メッセージ：メッセージのみ編集可能
+     */
+    VALIDATION: {
+    /* 以下省略 */
+    };
+  };
+})();
+
+```
