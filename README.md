@@ -189,7 +189,11 @@
 
 ```
 
-③各オブジェクトにsettingオブジェクトを追加
+③以下オブジェクト、プロパティを追加
+- setting：Kuc仕様のプロパティを追加（https://ui-component.kintone.dev/ja/docs/components/desktop/text#property）
+- type："text"
+- divId：①config.htmlで配置したdivのid名（"text"）
+- category："common"
 ```
 (() => {
   window.SR.fieldConf = window.SR.fieldConf || {};
