@@ -62,11 +62,11 @@
 <!-- 以下div内に追加 -->
 <div class="row-container">
   <!-- フィールド数分divを追加 -->
-  <div id="text"></div> 
-  <div id="dateTimePicker"></div> 
-  <div id="dropdown"></div> 
-  <div id="checkbox"></div> 
-  <div id="radioButton"></div> 
+  <div id="text-div"></div> 
+  <div id="dateTimePicker-div"></div> 
+  <div id="dropdown-div"></div> 
+  <div id="checkbox-div"></div> 
+  <div id="radioButton-div"></div> 
 </div>
 ```
 
@@ -85,11 +85,11 @@
         <div>
             <div class="row-container">
               <!-- ここにdivに追加 -->
-                <div id="text"></div>
-                <div id="dateTimePicker"></div>
-                <div id="dropdown"></div>
-                <div id="checkbox"></div>
-                <div id="radioButton"></div>
+                <div id="text-div"></div>
+                <div id="dateTimePicker-div"></div>
+                <div id="dropdown-div"></div>
+                <div id="checkbox-div"></div>
+                <div id="radioButton-div"></div>
             </div>
             <!-- 以下編集不可 -->
             <div style="display: flex;">
@@ -108,7 +108,7 @@
 
 3.o1.fieldConf.jsファイル修正<br>
 ①初期内容
-```
+```js
 /*
  *　01.fieldConf.js：項目・値設定用
  */
@@ -171,7 +171,7 @@
   ・textオブジェクト
   ・dateTimePickerオブジェクト
   
-```
+```js
 (() => {
   window.SR.fieldConf = window.SR.fieldConf || {};
 
@@ -194,7 +194,7 @@
 - type："text"
 - divId：①config.htmlで配置したdivのid名（"text"）
 - category："common"
-```
+```js
 (() => {
   window.SR.fieldConf = window.SR.fieldConf || {};
 
@@ -217,7 +217,7 @@
           disabled: false,
         },
         type: "text",
-        divId: "text",
+        divId: "text-div",
         category: "common",
       },
       dateTimePicker: {},
@@ -229,3 +229,62 @@
 })();
 
 ```
+④日時フィールドも同様にオブジェクト、プロパティを追加
+
+```js
+(() => {
+  window.SR.fieldConf = window.SR.fieldConf || {};
+
+  window.SR.fieldConf = {
+    FIELDS_CONFIG: {
+      /** オブジェクト追加 */
+      text: {
+        settings: {
+          label: "",
+          requiredIcon: true,
+          value: "",
+          placeholder: "",
+          prefix: "",
+          suffix: "",
+          textAlign: "",
+          error: "",
+          className: "options-class",
+          id: "text-id",
+          visible: true,
+          disabled: false,
+        },
+        type: "text",
+        divId: "text-div",
+        category: "common",
+      },
+      dateTimePicker: {
+        settings: {
+          label: "",
+          requiredIcon: false,
+          language: "auto",
+          hour12: false,
+          value: "",
+          error: "",
+          className: "options-class",
+          id: "dateTimePicker-id",
+          visible: true,
+          disabled: false,
+          timeStep: 30,
+          max: "23:59",
+          min: "00:00",
+        },
+        type: "dateTimePicker",
+        divId: "dateTimePicker-div",
+        category: "common",
+      },
+
+      // submit変更不可
+      submit: {
+      /** 以下省略 */
+  };
+})();
+
+```
+
+※※※各プロパティは以下URLを参照！！※※※<br>
+https://grey-soarer-8bb.notion.site/83fba23cf92c4241b79288a7f4fa5635?pvs=4
