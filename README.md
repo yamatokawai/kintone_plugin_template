@@ -32,8 +32,9 @@
     <!-- フィールド配置先はdivで作成。idは必ず付与。 -->
     <body>
         <div>
-            <!-- 以下div内に追加 -->
-            <div class="row-container"></div>
+            <div class="row-container">
+              <!-- ここにdivに追加 -->
+            </div>
             <!-- 以下編集不可 -->
             <div style="display: flex;">
                 <div id="submit-button" class="submit-button-container"></div>
@@ -50,6 +51,12 @@
 　②以下部分を修正<br>
  　・row-containerクラス名を保持するdiv内に、追加したいフィールド数分divを追加。<br>
  　・追加したdivに任意のidを付与。<br>
+　 ・本サンプルでは、以下フィールドを作成<br>
+   - 文字列（一行）
+   - 日時
+   - ドロップダウン
+   - チェックボックス
+   - ラジオボタン
 ```markdown
 <!-- 以下div内に追加 -->
 <div class="row-container">
@@ -62,12 +69,6 @@
 </div>
 ```
 　③完成形<br>
-　・本サンプルでは、以下フィールドを作成<br>
-   - 文字列（一行）
-   - 日時
-   - ドロップダウン
-   - チェックボックス
-   - ラジオボタン
 ```markdown
 <!DOCTYPE html>
 <html lang="ja">
@@ -80,8 +81,8 @@
     <!-- フィールド配置先はdivで作成。idは必ず付与。 -->
     <body>
         <div>
-            <!-- 以下div内に追加 -->
             <div class="row-container">
+              <!-- ここにdivに追加 -->
                 <div id="text"></div>
                 <div id="dateTimePicker"></div>
                 <div id="dropdown"></div>
