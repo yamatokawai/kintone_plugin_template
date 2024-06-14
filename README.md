@@ -118,7 +118,7 @@
 
   window.SR.fieldConf = {
     FIELDS_CONFIG: {
-    /** ここに追加 */
+    /** ここにオブジェクト追加 */
 
     // submit変更不可
       submit: {
@@ -162,6 +162,65 @@
     VALIDATION: {
     /* 以下省略 */
     };
+  };
+})();
+
+```
+
+②以下追加
+  ・textオブジェクト
+  ・dateTimePickerオブジェクト
+  
+```
+(() => {
+  window.SR.fieldConf = window.SR.fieldConf || {};
+
+  window.SR.fieldConf = {
+    FIELDS_CONFIG: {
+      /** オブジェクト追加 */
+      text: {},
+      dateTimePicker: {},
+
+      // submit変更不可
+      submit: {
+      /** 以下省略 */
+  };
+})();
+
+```
+
+③各オブジェクトにsettingオブジェクトを追加
+```
+(() => {
+  window.SR.fieldConf = window.SR.fieldConf || {};
+
+  window.SR.fieldConf = {
+    FIELDS_CONFIG: {
+      /** オブジェクト追加 */
+      text: {
+        settings: {
+          label: "",
+          requiredIcon: true,
+          value: "",
+          placeholder: "",
+          prefix: "",
+          suffix: "",
+          textAlign: "",
+          error: "",
+          className: "options-class",
+          id: "text-id",
+          visible: true,
+          disabled: false,
+        },
+        type: "text",
+        divId: "text",
+        category: "common",
+      },
+      dateTimePicker: {},
+
+      // submit変更不可
+      submit: {
+      /** 以下省略 */
   };
 })();
 
