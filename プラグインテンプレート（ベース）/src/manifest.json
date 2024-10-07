@@ -1,0 +1,23 @@
+{
+  "manifest_version": 1,
+  "version": "0.0.1",
+  "type": "APP",
+  "name": {
+    "ja": "テストプラグイン",
+    "en": "sample plugin",
+    "zh": "插件的例子",
+    "es": "Complemento de ejemplo"
+  },
+  "description": {
+    "ja": "テストプラグイン",
+    "en": "This is sample plugin.",
+    "zh": "这是插件的例子",
+    "es": "Este es un complemento de ejemplo."
+  },
+  "icon": "image/アイコン.png",
+  "config": {
+    "html": "html/config.html",
+    "js": ["010.kuc.min.js", "js/00.funcConf.js", "js/01.fieldConf.js", "js/10.config.js"],
+    "css": ["css/config.css"]
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <!-- フィールド配置先はdivで作成。idは必ず付与。 -->
+    <body>
+        <div>
+            <!-- 以下div内に追加 -->
+            <div class="row-container">
+                <div id="text"></div>
+                <div id="dateTimePicker"></div>
+                <div id="dropdown"></div>
+                <div id="checkbox"></div>
+                <div id="radioButton"></div>
+            </div>
+            <!-- 以下編集不可 -->
+            <div style="display: flex;">
+                <div id="submit-button" class="submit-button-container"></div>
+                <div id="cancel-button" class="submit-button-container"></div>
+            </div>
+        </div>
+        <script src="010.kuc.min.js"></script>
+        <script src="../js/00.funcConf.js"></script>
+        <script src="../js/01.fieldConf.js"></script>
+        <script src="../js/10.config.js"></script>
+    </body>
+</html>

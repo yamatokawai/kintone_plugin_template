@@ -1,0 +1,50 @@
+<!-- ※　<div class="kintoneplugin-outer"> はコピーしない -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <!-- フィールド配置先はdivで作成。idは必ず付与。 -->
+    <body>
+        <div>
+            <h1>フィールド一覧</h1>
+            <div class="row-container">
+                <p style="font-size: larger; font-weight: 500;">パターンA</p>
+                <div class="field-container">
+                    <div id="text"></div>
+                </div>
+                <p style="font-size: larger; font-weight: 500;">パターンB</p>
+                <div class="horizontal-container">
+                    <div id="textarea"></div>
+                    <div id="timePicker"></div>
+                    <div id="dateTimePicker"></div>
+                    <div id="datePicker"></div>
+                    <div id="checkbox"></div>
+                </div>
+                <div class="field-container">
+                    <div id="combobox"></div>
+                    <div id="radioButton"></div>
+                </div>
+                <div class="field-container">
+                    <div id="multiChoice"></div>
+                    <div id="dropdown"></div>
+                </div>
+                <p style="font-size: larger; font-weight: 500;">パターンC</p>
+                <div class="field-container">
+                    <div id="table_sp"></div>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div id="submit-button" class="submit-button-container"></div>
+                <div id="cancel-button" class="submit-button-container"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/kintone-ui-component/umd/kuc.min.js"></script>
+        <script src="../js/00.funcConf.js"></script>
+        <script src="../js/01.fieldConf.js"></script>
+        <script src="../js/10.config.js"></script>
+    </body>
+</html>

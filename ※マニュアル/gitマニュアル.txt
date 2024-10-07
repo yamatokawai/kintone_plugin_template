@@ -1,0 +1,5 @@
+●githubマニュアル（README）
+https://github.com/yamatokawai/kintone_plugin_template/blob/main/README.md
+
+●プロパティ設定マニュアル（notion）
+https://www.notion.so/83fba23cf92c4241b79288a7f4fa5635
